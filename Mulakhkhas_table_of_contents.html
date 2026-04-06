@@ -280,7 +280,6 @@
             min-height: 12000px; /* Increased for many nodes */
             padding: 100px;
             transform-origin: 0 0;
-            transition: transform 0.3s ease;
         }
         
         /* SVG for connections */
@@ -3829,7 +3828,7 @@
         // Zoom functions
         // Zoom keeping a viewport-space pivot point stationary.
         // If pivotX/Y omitted, uses the visible centre of the container.
-        let _scrollRaf = null;
+
         function applyZoomAround(newZoom, pivotX, pivotY) {
             const container = document.getElementById('mindmap-container');
             const oldZoom = currentZoom;
@@ -3837,22 +3836,12 @@
                 pivotX = container.clientWidth  / 2;
                 pivotY = container.clientHeight / 2;
             }
-            // Content-space coords of the pivot at the current zoom
             const cx = (container.scrollLeft + pivotX) / oldZoom;
             const cy = (container.scrollTop  + pivotY) / oldZoom;
             currentZoom = newZoom;
             applyZoom();
-            // Defer scroll restoration until after the browser has reflowed the
-            // new minWidth/minHeight; cancel any pending restoration from a
-            // previous rapid event so only the last one wins.
-            if (_scrollRaf) cancelAnimationFrame(_scrollRaf);
-            const targetLeft = cx * currentZoom - pivotX;
-            const targetTop  = cy * currentZoom - pivotY;
-            _scrollRaf = requestAnimationFrame(() => {
-                container.scrollLeft = targetLeft;
-                container.scrollTop  = targetTop;
-                _scrollRaf = null;
-            });
+            container.scrollLeft = cx * currentZoom - pivotX;
+            container.scrollTop  = cy * currentZoom - pivotY;
         }
 
         function zoomIn() {
@@ -3896,11 +3885,8 @@
         function applyZoom() {
             const mindmap = document.getElementById('mindmap');
             mindmap.style.transform = `scale(${currentZoom})`;
-            
-            // Adjust container size based on zoom (use larger base sizes)
-            const container = document.getElementById('mindmap-container');
-            mindmap.style.minWidth = `${8000 * currentZoom}px`;
-            mindmap.style.minHeight = `${12000 * currentZoom}px`;
+            mindmap.style.width = `${8000 * currentZoom}px`;
+            mindmap.style.height = `${12000 * currentZoom}px`;
         }
         
         // Layout configuration
@@ -4028,19 +4014,6 @@
             // Each entry has: title (header), and html (the body).
             // Use one .translation-block per passage.
             // ─────────────────────────────────────────────────────────────────
-
-            'muq': {
-                title: 'Premise (muqaddima)',
-                html: `
-                <div class="translation-block">
-                    <p class="translation-label">Translation — p. 7</p>
-                    <blockquote class="translation-quote">
-                        "Replace this with the actual passage from your translation."
-                    </blockquote>
-                    <p class="translation-note">Optional note on the passage, context, or variant readings.</p>
-                </div>
-                `
-            },
 
             // ── Supplementary tables and diagrams ────────────────────────────
             'maq2-1-4-6-6-2': {

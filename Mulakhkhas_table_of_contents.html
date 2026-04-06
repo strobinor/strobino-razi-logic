@@ -3884,9 +3884,17 @@
         
         function applyZoom() {
             const mindmap = document.getElementById('mindmap');
-            mindmap.style.transform = `scale(${currentZoom})`;
-            mindmap.style.width = `${8000 * currentZoom}px`;
-            mindmap.style.height = `${12000 * currentZoom}px`;
+            const container = document.getElementById('mindmap-container');
+            const scaledW = 8000 * currentZoom;
+            const scaledH = 12000 * currentZoom;
+            const cw = container.clientWidth;
+            const ch = container.clientHeight;
+            // Centre the map when it's smaller than the viewport
+            const offsetX = scaledW < cw ? (cw - scaledW) / 2 : 0;
+            const offsetY = scaledH < ch ? (ch - scaledH) / 2 : 0;
+            mindmap.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${currentZoom})`;
+            mindmap.style.width = `${Math.max(scaledW, cw)}px`;
+            mindmap.style.height = `${Math.max(scaledH, ch)}px`;
         }
         
         // Layout configuration
@@ -4319,6 +4327,9 @@
                 // Draw all connections
                 const connectionCount = renderConnections(mindmapData, svg);
                 console.log('Drew', connectionCount, 'connections');
+
+                // Reapply search highlights if active
+                if (searchMatchIds.size > 0) applySearchHighlights();
             }, 150); // Delay to ensure all nodes are laid out
         }
         
@@ -4366,6 +4377,8 @@
         }
 
         let searchMatches = [];
+        let searchMatchIds = new Set();
+        let searchAncestorIds = new Set();
         let searchIndex = -1;
 
         function doSearch() {
@@ -4376,27 +4389,18 @@
 
             if (!q) { clearSearch(); return; }
 
-            const matchIds = new Set();
-            markSearchResults(mindmapData, q, matchIds);
+            searchMatchIds = new Set();
+            markSearchResults(mindmapData, q, searchMatchIds);
 
-            const ancestorIds = new Set();
-            collectAncestorIds(mindmapData, matchIds, ancestorIds);
+            searchAncestorIds = new Set();
+            collectAncestorIds(mindmapData, searchMatchIds, searchAncestorIds);
 
             // Expand all ancestors so matches are visible
-            ancestorIds.forEach(id => delete nodeStates[id]);
+            searchAncestorIds.forEach(id => delete nodeStates[id]);
             render();
 
             // Apply highlights after render
-            searchMatches = [];
-            document.querySelectorAll('.node').forEach(el => {
-                const id = el.id.replace('node-', '');
-                if (matchIds.has(id)) {
-                    el.classList.add('search-match');
-                    searchMatches.push(el);
-                } else if (!ancestorIds.has(id)) {
-                    el.classList.add('search-dim');
-                }
-            });
+            applySearchHighlights();
 
             const count = searchMatches.length;
             if (count === 0) {
@@ -4419,13 +4423,14 @@
                 const el = searchMatches[searchIndex];
                 el.classList.add('search-focus');
                 countEl.textContent = `${searchIndex + 1} / ${searchMatches.length}`;
-                // Scroll to the focused match
+                // Scroll to the focused match — instant to avoid jitter
                 const container = document.getElementById('mindmap-container');
                 const nodeRect = el.getBoundingClientRect();
                 const containerRect = container.getBoundingClientRect();
                 const targetLeft = container.scrollLeft + (nodeRect.left - containerRect.left) - containerRect.width / 2 + nodeRect.width / 2;
                 const targetTop = container.scrollTop + (nodeRect.top - containerRect.top) - containerRect.height / 2 + nodeRect.height / 2;
-                container.scrollTo({ left: targetLeft, top: targetTop, behavior: 'smooth' });
+                container.scrollLeft = targetLeft;
+                container.scrollTop = targetTop;
             }
         }
 
@@ -4435,12 +4440,32 @@
             updateSearchFocus();
         }
 
+        function applySearchHighlights() {
+            searchMatches = [];
+            document.querySelectorAll('.node').forEach(el => {
+                const id = el.id.replace('node-', '');
+                el.classList.remove('search-match', 'search-dim', 'search-focus');
+                if (searchMatchIds.has(id)) {
+                    el.classList.add('search-match');
+                    searchMatches.push(el);
+                } else if (searchMatchIds.size > 0 && !searchAncestorIds.has(id)) {
+                    el.classList.add('search-dim');
+                }
+            });
+            if (searchMatches.length > 0 && searchIndex >= 0) {
+                if (searchIndex >= searchMatches.length) searchIndex = 0;
+                searchMatches[searchIndex].classList.add('search-focus');
+            }
+        }
+
         function clearSearch() {
             document.getElementById('search-input').value = '';
             document.getElementById('search-count').textContent = '';
             document.getElementById('search-prev').style.display = 'none';
             document.getElementById('search-next').style.display = 'none';
             searchMatches = [];
+            searchMatchIds = new Set();
+            searchAncestorIds = new Set();
             searchIndex = -1;
             document.querySelectorAll('.node').forEach(el => {
                 el.classList.remove('search-match', 'search-dim', 'search-focus');

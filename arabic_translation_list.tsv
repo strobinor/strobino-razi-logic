@@ -1,0 +1,400 @@
+depth	id	text	label	desc	term	page	arabic_text	arabic_desc
+0	root	Mulakhkhaṣ						
+1	mantiq	Manṭiq						
+2	muq		Muqaddima	Premise		7		
+3	muq-1	(i) Need for logic				7		
+3	muq-2	(ii) Subject matter of logic				9		
+2	maq1	1	Jumla	How conceptions are acquired		11		
+3	maq1-1	1.1	Bāb	Premises		13		
+4	maq1-1-1	1.1.1		Division of all investigations in this area		15		
+4	maq1-1-2	1.1.2		Investigations of correspondence, containment, and implication		19		
+5	maq1-1-2-1	Signification of implication in the sciences				20		
+4	maq1-1-3	1.1.3		Investigations of simple and compound		22		
+4	maq1-1-4	1.1.4		Investigations of universal and particular		25		
+5	maq1-1-4-1	1.1.4.1		[Division of universal]		25		
+5	maq1-1-4-2	1.1.4.2		[Real particular and relational particular]		26		
+5	maq1-1-4-3	1.1.4.3		[Natural universal, logical universal, intellectual universal]		27		
+5	maq1-1-4-4	1.1.4.4		[Criticism of the claim that the intellectual universal is a mental form]		28		
+5	maq1-1-4-5	1.1.4.5		[Proof that the universal exists outside]		30		
+5	maq1-1-4-6	1.1.4.6		[The contradictory of the more general is more specific]		30		
+5	maq1-1-4-7	1.1.4.7		[The four relations]		31		
+5	maq1-1-4-8	1.1.4.8		[The universal being better known than the particular]		31		
+5	maq1-1-4-9	1.1.4.9		[How the perception of the determinate individual insofar as it is that individual is possible]		31		
+5	maq1-1-4-10	1.1.4.10		[Whether individuality is a thing established in addition to the quiddity]		32		
+5	maq1-1-4-11	1.1.4.11		[Univocal and equivocal predication]		33		
+4	maq1-1-5	1.1.5		Subject and predicate		34		
+4	maq1-1-6	1.1.6		Investigations of the quiddity		36		
+5	maq1-1-6-1	1.1.6.1 [Criticism of the claim that what is said in response to "What is it?" is the more general <i>dhātī</i>				36		
+5	maq1-1-6-2	1.1.6.2		[Difference between what is said in response to "What is it?", by way of "What is it?" and included in "What is it?"]		37		
+5	maq1-1-6-3	1.1.6.3		[What is said in response to "What is it?" by sharing]		37		
+5	maq1-1-6-4	1.1.6.4		What signifies the quiddity ought not to be called dhātī		38		
+4	maq1-1-7	1.1.7		Investigations of the part of the quiddity		39		
+5	maq1-1-7-1	1.1.7.1		[The parts of the quiddity are prior to the quiddity in external existence]		39		
+5	maq1-1-7-2	1.1.7.2		[The part is sometimes prior to the whole and sometimes posterior]		41		
+5	maq1-1-7-3	1.1.7.3		[The part of a quiddity cannot be a characteristic (ṣifa) of it]		42		
+5	maq1-1-7-4	1.1.7.4		[The part of a quiddity is prior in the mind]		43		
+5	maq1-1-7-5	1.1.7.5		[Divisions of the composition of quiddity]		43		
+5	maq1-1-7-6	1.1.7.6 [A group\				44		
+5	maq1-1-7-7	1.1.7.7		[Part of a quiddity is not receptive to being stronger or weaker]		45		
+5	maq1-1-7-8	1.1.7.8		[The parts of quiddity are finite]		45		
+5	maq1-1-7-9	1.1.7.9		[The quiddity is realized or considered]		46		
+5	maq1-1-7-10	1.1.7.10		[The parts of the quiddity are not more obscure than it]		46		
+5	maq1-1-7-11	1.1.7.11		[Meanings of dhātī]		47		
+4	maq1-1-8	1.1.8	Mabḥath	Investigations of the external implicates	lawāzim khārijiyya	50		
+5	maq1-1-8-1	1.1.8.1		[Definition of the external implicate]		50		
+5	maq1-1-8-2	1.1.8.2		[Existence of the external implicate]		51		
+5	maq1-1-8-3	1.1.8.3		[The implicate without middle]		52		
+5	maq1-1-8-4	1.1.8.4		[The implicate with middle]		52		
+5	maq1-1-8-5	1.1.8.5		[The proximate implicate of the quiddity evidently belongs to it]		52		
+5	maq1-1-8-6	1.1.8.6		[Knowledge that the implicate with middle belongs rests on knowledge of that middle]		54		
+5	maq1-1-8-7	1.1.8.7		[Whether the simple quiddity has an implicate or not]		54		
+5	maq1-1-8-8	1.1.8.8		[Whether two implicates together necessarily follow from the simple]		55		
+5	maq1-1-8-9	1.1.8.9		[Division of the implicates]		55		
+4	maq1-1-9	1.1.9	Mabḥath	Investigations of the genus		58		
+5	maq1-1-9-1	1.1.9.1						
+5	maq1-1-9-2	1.1.9.2						
+5	maq1-1-9-3	1.1.9.3						
+5	maq1-1-9-4	1.1.9.4						
+5	maq1-1-9-5	1.1.9.5						
+5	maq1-1-9-6	1.1.9.6						
+5	maq1-1-9-7	1.1.9.7						
+4	maq1-1-10	1.1.10	Mabḥath	Investigations of the species		66		
+5	maq1-1-10-1	1.1.10.1		[Real species and relational species]		66		
+5	maq1-1-10-2	1.1.10.2		[Refutation of the view that the real species is more specific than the relational species absolutely]		67		
+5	maq1-1-10-3	1.1.10.3		[The species in the five universals is a real species]		68		
+5	maq1-1-10-4	1.1.10.4		[Ranks of the species]		68		
+5	maq1-1-10-5	1.1.10.5		[Most specific species]	nawʿ al-anwāʿ	68		
+5	maq1-1-10-6	1.1.10.6		[Whether one individual is enough for something to be a species]		69		
+4	maq1-1-11	1.1.11	Mabḥath	Investigations shared by species and genus		70		
+5	maq1-1-11-1	1.1.11.1		[The logical genus is not constitutive either of the natural species or of the relational species]		70		
+5	maq1-1-11-2	1.1.11.2		[Genus and species, before, with, and after plurality]		71		
+5	maq1-1-11-3	1.1.11.3		[Finitude of summa genera and infimae species]		72		
+5	maq1-1-11-4	1.1.11.4		[The genus is extensionally greater than the species and the species is intensionally greater than the genus]		73		
+4	maq1-1-12	1.1.12	Mabḥath	Investigations of the differentia		73		
+5	maq1-1-12-1	1.1.12.1		[How the differentia constitutes the genus]		71		
+5	maq1-1-12-2	1.1.12.2		[Whether the constitutive differentia of the species can be said in response to "What is it?"]		72		
+5	maq1-1-12-3	1.1.12.3		[The differentia is divisive of the genus and constitutive of the species]		74		
+5	maq1-1-12-4	1.1.12.4		[The highest genus has a divisive differentia but not a constitutive differentia]		74		
+5	maq1-1-12-5	1.1.12.5		[Every constitutive differentia of the highest genus is constitutive of the lower]		75		
+5	maq1-1-12-6	1.1.12.6		[Refutation of the claim that all divisive differentia must be constitutive]		77		
+5	maq1-1-12-7	1.1.12.7		[The differentia at one single stage is only one]		78		
+5	maq1-1-12-8	1.1.12.8		[Every species has a differentia that constitutes it and divides its genus]		79		
+5	maq1-1-12-9	1.1.12.9		[Criticism of the deduction of the upward finitude of genera ]		79		
+5	maq1-1-12-10	1.1.12.10		[A single differentia constitutes a single species only]		80		
+5	maq1-1-12-11	1.1.12.11		[The differentia cannot cease with the species remaining]		80		
+5	maq1-1-12-12	1.1.12.12		[The differentia is sometimes composite and sometimes simple]		81		
+5	maq1-1-12-13	1.1.12.13		[The logical differentia and the simple differentia]		82		
+5	maq1-1-12-14	1.1.12.14		[The differentia sharing in with the species and being distinct from it]		82		
+5	maq1-1-12-15	1.1.12.15		[Their claim that what is said in response to "Which?" by itself is what is said in response to "What is it?"]		83		
+5	maq1-1-12-16	1.1.12.16		[Descriptions of the differentia]		83		
+4	maq1-1-13	1.1.13	Mabḥath	Investigations of the proprium		85		
+4	maq1-1-14	1.1.14	Mabḥath	Investigations of the common accident		87		
+4	maq1-1-15	1.1.15	Mabḥath	How the five are hunted		89		
+4	maq1-1-16	1.1.16	Mabḥath	Characteristics shared by the five		92		
+3	maq1-2	1.2	Bāb	Goals, that is the discussion of definitions and descriptions		99		
+4	maq1-2-1	1.2.1		Division of definitions	taʿrīfāt	101		
+5	maq1-2-1-1	1.2.1.1Doubts on the division of definitions				102		
+5	maq1-2-1-2	1.2.1.2		Criticism of the replies of the group to the doubts		104		
+5	maq1-2-1-3	1.2.1.3		Replies to the doubts		105		
+4	maq1-2-2	1.2.2		Division of quiddities with respect to definition	ḥadd	107		
+4	maq1-2-3	1.2.3		The simples conceptualized by a conception devoid of acquisition		109		
+4	maq1-2-4	1.2.4		On the fact that not everyone who makes the thing known by mentioning its parts makes it known by definition		110		
+4	maq1-2-5	1.2.5		On the fact that definition is not acquired by proof		111		
+4	maq1-2-6	1.2.6		On the fact that adding to the definition is not possible whereas adding to the description is possible		112		
+4	maq1-2-7	1.2.7		On the mutual relationship (munāsaba) between definitions and descriptions		113		
+4	maq1-2-8	1.2.8		Rebuke of definitions and descriptions		115		
+4	maq1-2-9	1.2.9		Difficulty in the composition of definitions		118		
+2	maq2	2	Jumla	How assertions are acquired		119		
+3	maq2-1	2.1	Bāb	Valuations (aḥkām) of Propositions		121		
+4	maq2-1-1	Premise	muqaddima			123		
+4	maq2-1-2	(i)	Mabḥath	Definition of proposition		123		
+4	maq2-1-3	(ii)	Mabḥath	Division of propositions		124		
+4	maq2-1-4	2.1.1		Categorical propositions		129		
+5	maq2-1-1-1	2.1.1.1		Elements of propositions		129		
+6	maq2-1-1-1-form	2.1.1.1.1		Form	ṣūra	129		
+7	maq2-1-1-1-form-mna	2.1.1.1.1.1		Meaning	maʿnan	129		
+8	maq2-1-4-1-1			(i) [The nexus (nisba) is distinct from subject and predicate]		129		
+8	maq2-1-4-1-2			(ii) [The nexus of the subject to the predicate is other than the nexus of the predicate to the subject]		130		
+7	maq2-1-1-1-form-laf	2.1.1.1.1.2		Expression	lafẓ	130		
+8	maq2-1-4-1-3			(i) [The bipartite proposition]		130		
+8	maq2-1-4-1-4			(ii) [The natural place of the copula]		130		
+8	maq2-1-4-1-5			(iii) [Every proposition is in itself quadripartite]		131		
+8	maq2-1-4-1-6			(iv) [The modalized proposition]		131		
+8	maq2-1-4-1-7			(v) [Doubts and replies]		131		
+8	maq2-1-4-1-8			(vi) [The quantifier is not part of the intelligible proposition]		132		
+8	maq2-1-4-1-9			(vii) [Affirmation and negation]		132		
+8	maq2-1-4-1-10			(viii) [Doubt on the judgment by special negation]		133		
+8	maq2-1-4-1-11			(ix) [Affirmation is simpler (absaṭ) than negation]		133		
+6	maq2-1-1-1-mat	2.1.1.1.2		Matter	mādda	134		
+7	maq2-1-1-1-mat-sh	2.1.1.1.2.1		Shared by subject and predicate		134		
+8	maq2-1-4-1-13			(i) [Indefiniteness (ʿudūl) and determinateness (taḥṣīl)]		134		
+8	maq2-1-4-1-14			(ii) [Criticism of the claim that negation correctly applies to the privative unlike affirmation to the indefinite]		136		
+8	maq2-1-4-1-15			(iii) [Whether the indefinite signifies privation opposite to possession or what is more general]		137		
+8	maq2-1-4-1-16			(iv) [Criticism of the claim that the affirmative inevitably requires the existence of the subject]		138		
+7	maq2-1-1-1-mat-subj	2.1.1.1.2.2		Proper to the subject		138		
+8	maq2-1-1-1-mat-subj-sing	2.1.1.1.2.2.1		Specificity (khuṣūṣ), indeterminateness (ihmāl), and quantification (ḥaṣr)		138		
+9	maq2-1-1-1-mat-subj-sing-q	2.1.1.1.2.2.1.1		Quantified propositions	musawwarāt			
+10	maq2-1-4-2	2.1.1.1.2.2.1.1.1		Verification of the universal affirmative		140		
+11	maq2-1-4-2-1			(i) [The essentialist reading]				
+11	maq2-1-1-1-mat-subj-sing-q-ua-2			(ii) [The externalist reading]				
+10	maq2-1-4-2-2	2.1.1.1.2.2.1.1.2		Verification of the universal negative				
+10	maq2-1-4-3	2.1.1.1.2.2.1.1.3		The particular proposition				
+9	maq2-1-4-4	2.1.1.1.2.2.1.2		Indeterminate propositions	muhmalāt			
+7	maq2-1-1-1-mat-pred	2.1.1.1.2.3		Proper to the predicate		146		
+8	maq2-1-4-5	2.1.1.1.2.3.1		Quantifiers in the predicates		146		
+8	maq2-1-4-6	2.1.1.1.2.3.2		[The modes of propositions]		149		
+9	maq2-1-4-6-1	2.1.1.1.2.3.2.1		Necessity	ḍarūra	150		
+9	maq2-1-4-6-2	2.1.1.1.2.3.2.2		Possibile	mumkin	152		
+9	maq2-1-4-6-3	2.1.1.1.2.3.2.3		The necessary and the possible with respect to the mind		156		
+10	maq2-1-4-6-3-1			(i) [Mental necessity is more specific than external necessity]				
+10	maq2-1-4-6-3-2			(ii) [Immediacy of mental necessity and mental possibility]				
+9	maq2-1-4-6-4	2.1.1.1.2.3.2.4		Mutual implication of the modalized				
+9	maq2-1-4-6-5	2.1.1.1.2.3.2.5		Divisions of propositions with respect to absoluteness and modalization				
+10	maq2-1-1-1-mat-pred-modes-div-abs	2.1.1.1.2.3.2.5.1		Absolute propositions				
+11	maq2-1-4-6-5-2			(i) [Universal affirmative]		161		
+11	maq2-1-4-6-5-3			(ii) [Universal negative]		163		
+10	maq2-1-1-1-mat-pred-modes-div-mod	2.1.1.1.2.3.2.5.2		Modalized propositions		164		
+11	maq2-1-4-6-6-1	2.1.1.1.2.3.2.5.2.1		[Species of the modes]				
+12	maq2-1-4-6-6-1-1	2.1.1.1.2.3.2.5.2.1.1		[Species of the modes with respect to perpetuity and non-perpetuity]		164		
+13	maq2-1-4-6-6-1-1-1	(i) Perpetual				164		
+13	maq2-1-4-6-6-1-1-2	(ii) Convertible absolute descriptional				165		
+13	maq2-1-4-6-6-1-1-3	(iii) non-perpetual existential				165		
+13	maq2-1-4-6-6-1-1-4	(iv) conventional existential				166		
+12	maq2-1-4-6-6-1-2	2.1.1.1.2.3.2.5.2.1.2		[Species of the modes with respect to necessity and non-necessity]		166		
+13	maq2-1-4-6-6-1-2-1	2.1.1.1.2.3.2.5.2.1.2.1		[Necessity as predicate or part of the predicate]		167		
+13	maq2-1-4-6-6-1-2-2	2.1.1.1.2.3.2.5.2.1.2.2		[Necessity as mode of the predication]		167		
+14	maq2-1-4-6-6-1-2-2-1	(i) Absolute necessity			bi-ḥasab adh-dhāt	167		
+14	maq2-1-4-6-6-1-2-2-2	(ii) Descriptional necessity			bi-ḥasab al-waṣf	168		
+14	maq2-1-4-6-6-1-2-2-3	(iii) Conventional necessity			ḍarūriyya ʿurfiyya			
+14	maq2-1-4-6-6-1-2-2-4	(iv) Determinate temporal necessity						
+14	maq2-1-4-6-6-1-2-2-5	(v) Indeterminate temporal necessity						
+12	maq2-1-4-6-6-1-3	2.1.1.1.2.3.2.5.2.1.3		[Species of the modes with respect to possibility]				
+11	maq2-1-4-6-6-2	2.1.1.1.2.3.2.5.2.2		[Summary of modalized propositions]		169		
+12	maq2-1-4-6-6-2-1	(1) General possibility proposition			mumkina ʿāmma			
+12	maq2-1-4-6-6-2-2	(2) Special possibility proposition			mumkina khāṣṣa			
+12	maq2-1-4-6-6-2-3	(3) Stronger possibility proposition			mumkina llatī hiya akhaṣṣa			
+12	maq2-1-4-6-6-2-4	(4) Future possibility proposition			mumkina istiqbāliyya			
+12	maq2-1-4-6-6-2-5	(5) General absoluteness proposition			muṭlaqa ʿāmma			
+12	maq2-1-4-6-6-2-6	(6) Non-necessary existence proposition			wujūdiyya lā darūriyya			
+12	maq2-1-4-6-6-2-7	(7) Non-perpetual existence proposition			wujūdiyya lā dāʾima			
+12	maq2-1-4-6-6-2-8	(8) Determinate temporal necessity proposition			ḍarūriyya waqtiyya			
+12	maq2-1-4-6-6-2-9	(9) Indeterminate temporal necessity proposition			ḍarūriyya muntashira			
+12	maq2-1-4-6-6-2-10	(10) Absolute necessity proposition			ḍarūriyya muṭlaqa			
+12	maq2-1-4-6-6-2-11	(11) Perpetuity proposition			dāʾima			
+12	maq2-1-4-6-6-2-12	(12) General conditioned proposition			mashrūṭa ʿāmma			
+12	maq2-1-4-6-6-2-13	(13) Special conditioned proposition			mashrūṭa khāṣṣa			
+12	maq2-1-4-6-6-2-14	(14) General conventional proposition			ʿurfiyya ʿāmma			
+12	maq2-1-4-6-6-2-15	(15) Special conventional proposition			ʿurfiyya khāṣṣa			
+11	maq2-1-4-6-7	2.1.1.1.2.3.2.5.2.3		Further investigations		171		
+12	maq2-1-4-6-7-1	(i)		Mode of the quantifier and mode of the predication		171		
+12	maq2-1-4-6-7-2	(ii)		The judgment of perpetuity concerning universals is necessary				
+12	maq2-1-4-6-7-3	(iii)		[Place of the particle of negation in the removal of modalities]				
+8	maq2-1-4-6-8	2.1.1.1.2.4		Considerations relative to the unity or multiplicity of a proposition		172		
+5	maq2-1-1-2	2.1.1.2		Valuations	aḥkām	175		
+6	maq2-1-4-6-9-1	2.1.1.2.1		Contradiction	tanāquḍ	175		
+7	maq2-1-4-6-9-1-1	2.1.1.2.1.1	Mabḥath	[Definition of contradiction]		175		
+7	maq2-1-4-6-9-1-2	2.1.1.2.1.2	Mabḥath	[Whether truth or falsehood in the extremes of contradiction is specific]		176		
+7	maq2-1-4-6-9-1-3	2.1.1.2.1.3	Mabḥath	[Reducing the unity of the eight in contradiction to three]		177		
+8	maq2-1-4-6-9-1-3-1	Singular proposition			makhṣūṣa	177		
+9	maq2-1-4-6-9-1-3-1-1	(i) Subject						
+9	maq2-1-4-6-9-1-3-1-2	(ii) Predicate						
+9	maq2-1-4-6-9-1-3-1-3	(iii) Relation						
+9	maq2-1-4-6-9-1-3-1-4	(iv) Potency or act						
+9	maq2-1-4-6-9-1-3-1-5	(v) Part or whole						
+9	maq2-1-4-6-9-1-3-1-6	(vi) Condition						
+9	maq2-1-4-6-9-1-3-1-7	(vii) Place						
+9	maq2-1-4-6-9-1-3-1-8	(viii) Time						
+8	maq2-1-4-6-9-1-3-2	Indeterminate proposition			muhmala	179		
+8	maq2-1-4-6-9-1-3-3	Quantified propositions			maḥṣūra	179		
+7	maq2-1-4-6-9-1-4	2.1.1.2.1.4		[Contradictories of the thirteen propositions]		180		
+8	maq2-1-4-6-9-1-4-1	(1) Contradictory of the general absolute proposition				180		
+8	maq2-1-4-6-9-1-4-2	(2) Contradictory of the conventional absolute proposition				181		
+8	maq2-1-4-6-9-1-4-3	(3) Contradictory of the non-necessary existential proposition				181		
+8	maq2-1-4-6-9-1-4-4	(4) Contradictory of the non-perpetual existential proposition				181		
+8	maq2-1-4-6-9-1-4-5	(5) Contradictory of the non-perpetual existential conventional proposition				182		
+8	maq2-1-4-6-9-1-4-6	(6) Contradictory of the absolute necessity proposition				182		
+8	maq2-1-4-6-9-1-4-7	(7) Contradictory of the conditioned necessity proposition		(general conditioned)		182		
+8	maq2-1-4-6-9-1-4-8	(8) Contradictory of the conditioned necessity proposition		(special conditioned)		183		
+8	maq2-1-4-6-9-1-4-9	(9) Contradictory of the temporal necessity proposition				183		
+8	maq2-1-4-6-9-1-4-10	(10) Contradictory of the indeterminate necessity proposition				184		
+8	maq2-1-4-6-9-1-4-11	(11) Contradictory of the perpetuity proposition				184		
+8	maq2-1-4-6-9-1-4-12	(12) Contradictory of the general possibility proposition				184		
+8	maq2-1-4-6-9-1-4-13	(13) Contradictory of the special possibility proposition				184		
+6	maq2-1-4-6-9-2	2.1.1.2.2		Conversion	ʿaks mustawin	184		
+7	maq2-1-4-6-9-2-1	(1) [Conversion of the general absolute proposition]				185		
+8	maq2-1-4-6-9-2-1-1	(1.1) Universal negative				185		
+8	maq2-1-4-6-9-2-1-2	(1.2) Universal affirmative				186		
+8	maq2-1-4-6-9-2-1-3	(1.3) Particular affirmative				187		
+8	maq2-1-4-6-9-2-1-4	(1.4) Particular negative				187		
+7	maq2-1-4-6-9-2-2	(2) [Conversion of the conventional absolute proposition]				187		
+8	maq2-1-4-6-9-2-2-1	(2.1) Universal negative				187		
+8	maq2-1-4-6-9-2-2-2	(2.2) Universal affirmative				190		
+7	maq2-1-4-6-9-2-3	(3) [Conversion of the non-necessary existential proposition]				190		
+8	maq2-1-4-6-9-2-3-1	(3.1) Universal negative				190		
+8	maq2-1-4-6-9-2-3-2	(3.2) Affirmative				191		
+7	maq2-1-4-6-9-2-4	(4) [Conversion of the non-perpetual conventional existential proposition]				191		
+7	maq2-1-4-6-9-2-5	(5) [Conversion of the absolute necessity proposition]				192		
+8	maq2-1-4-6-9-2-5-1	(5.1) Universal negative				192		
+8	maq2-1-4-6-9-2-5-2	(5.2) Universal affirmative				193		
+7	maq2-1-4-6-9-2-6	(6) [Conversion of the conditioned necessity proposition]				195		
+8	maq2-1-4-6-9-2-6-1	(6.1) Universal negative				195		
+8	maq2-1-4-6-9-2-6-2	(6.2) Universal affirmative				195		
+7	maq2-1-4-6-9-2-7	(7) [Conversion of the conditioned necessity proposition with the condition of non-perpetuity		(special conditioned)		195		
+8	maq2-1-4-6-9-2-7-1	(7.1) Universal negative				195		
+8	maq2-1-4-6-9-2-7-2	(7.2) Universal affirmative				196		
+7	maq2-1-4-6-9-2-8	(8) [Conversion of the temporal and of the indeterminate necessity proposition]				196		
+8	maq2-1-4-6-9-2-8-1	(8.1) Universal negative				196		
+8	maq2-1-4-6-9-2-8-2	(8.2) Universal affirmative				196		
+7	maq2-1-4-6-9-2-9	(9) [Conversion of the possibility proposition]				196		
+8	maq2-1-4-6-9-2-9-1	(9.1) Universal negative		(general, special, or more special possibility)		196		
+8	maq2-1-4-6-9-2-9-2	(9.2) Universal affirmative				196		
+7	maq2-1-4-6-9-2-10	(10) [Summary of conversion of modalized propositions based on their relative strength]				197		
+8	maq2-1-4-6-9-2-10-1	(10.1) Negative propositions				198		
+8	maq2-1-4-6-9-2-10-2	(10.2) Affirmative propositions				199		
+9	maq2-1-4-6-9-2-10-2-1	(10.2.1) Essentialist reading of the subject term						
+9	maq2-1-4-6-9-2-10-2-2	(10.2.2) Externalist reading of the subject term						
+6	maq2-1-4-6-9-3	2.1.1.2.3		Contraposition	ʿaks an-naqīḍ	200		
+4	maq2-1-5	2.1.2		Hypothetical propositions		205		
+5	maq2-1-5-1	2.1.2.1		Conditional proposition		207		
+6	maq2-1-5-1-1	2.1.2.1	Mabḥath	[Conditional particles]		208		
+6	maq2-1-5-1-2	2.1.2.2	Mabḥath	[Antecedent and consequent]		208		
+6	maq2-1-5-1-3	2.1.2.3	Mabḥath	Implicative conditional proposition	luzūmiyya	208		
+5	maq2-1-5-2	2.1.2.2		Disjunctive proposition		208		
+6	maq2-1-5-2-div	2.1.2.2.1		Divisions of disjunctives		208		
+7	maq2-1-5-2-1			(i) [Disjunction of a proposition and its contradictory]		209		
+7	maq2-1-5-2-2			(ii) [Disjunction of a proposition and something equivalent to its contradictory]	munfaṣila ḥaqīqā	209		
+7	maq2-1-5-2-3			(iii) [Disjunction of a proposition and something more specific than its contradictory]		209		
+7	maq2-1-5-2-4			(iv) [Disjunction of a proposition and something more general than its contradictory]		209		
+7	maq2-1-5-2-5			(v) [Disjunction of a proposition and something more specific than its contradictory in one way and more general in another way]		210		
+6	maq2-1-5-2-6	2.1.2.2.2		Valuations of these divisions		210		
+7	maq2-1-5-2-6-1	2.1.2.2.2.1		[Valuations of the real disjunction]		210		
+7	maq2-1-5-2-6-2	2.1.2.2.2.2		[Valuations of the one that prevents joining]		211		
+7	maq2-1-5-2-6-3	2.1.2.2.2.3		[Valuations of the one that prevents excluding]		212		
+7	maq2-1-5-2-6-4	2.1.2.2.2.4		[Divisions of the one that prevents excluding]		212		
+8	maq2-1-5-2-6-4-1	(i) First type				212		
+8	maq2-1-5-2-6-4-2	(ii) Second type				213		
+8	maq2-1-5-2-6-4-3	(iii) Third type				213		
+8	maq2-1-5-2-6-4-4	(iv) Fourth type				213		
+8	maq2-1-5-2-6-4-5	(v) Fifth type				213		
+8	maq2-1-5-2-6-4-6	(vi) Sixth type				213		
+7	maq2-1-5-2-6-5	2.1.2.2.2.5		[Valuations common to all disjunctions]		213		
+5	maq2-1-5-3	2.1.2.3		Composition of hypothetical propositions		214		
+6	maq2-1-5-3-1	2.1.2.3.1		[Composition of conditional propositions]		214		
+7	maq2-1-5-3-1-1	2.1.2.3.1.1		[Of two categoricals]		214		
+7	maq2-1-5-3-1-2	2.1.2.3.1.2		[Of two conditionals]		214		
+7	maq2-1-5-3-1-3	2.1.2.3.1.3		[Of two disjunctives]		214		
+7	maq2-1-5-3-1-4	2.1.2.3.1.4		[Of a categorical and a conditional]		214		
+7	maq2-1-5-3-1-5	2.1.2.3.1.5		[Of a conditional and a categorical]		215		
+7	maq2-1-5-3-1-6	2.1.2.3.1.6		[Of a categorical and a disjunctive]		215		
+7	maq2-1-5-3-1-7	2.1.2.3.1.7		[Of a disjunctive and a categorical]		215		
+7	maq2-1-5-3-1-8	2.1.2.3.1.8		[Of a conditional and a disjunctive with the conditional as antecedent]		215		
+7	maq2-1-5-3-1-9	2.1.2.3.1.9		[Of a conditional and a disjunctive with the disjunctive as antecedent]		215		
+6	maq2-1-5-3-2	2.1.2.3.2		[Composition of disjunctive propositions]		215		
+7	maq2-1-5-3-2-1	2.1.2.3.2.1		[Of two categoricals]		215		
+7	maq2-1-5-3-2-2	2.1.2.3.2.2		[Of two conditionals]		216		
+7	maq2-1-5-3-2-3	2.1.2.3.2.3		[Of two disjunctives]		216		
+7	maq2-1-5-3-2-4	2.1.2.3.2.4		[Of a categorical and a conditional]		216		
+7	maq2-1-5-3-2-5	2.1.2.3.2.5		[Of categorical and a disjunctive]		216		
+7	maq2-1-5-3-2-6	2.1.2.3.2.6		[Of a conditional and a disjunctive]		217		
+5	maq2-1-5-4	2.1.2.4		Parts of hypotheticals		217		
+6	maq2-1-5-4-1	2.1.2.4.1		Unity conditions		217		
+6	maq2-1-5-4-2	2.1.2.4.2		[Parts (i) shared entirely, (ii) partially, or (iii) not at all]		218		
+6	maq2-1-5-4-3	2.1.2.4.3		[Position of hypothetical particles]		219		
+7	maq2-1-5-4-3-1	2.1.2.4.3.1		[Conditional with particle after the subject]		219		
+7	maq2-1-5-4-3-2	2.1.2.4.3.2		[Conditional with particle before the subject]		219		
+7	maq2-1-5-4-3-3	2.1.2.4.3.3		[Disjunctive with particle after the subject]		219		
+7	maq2-1-5-4-3-4	2.1.2.4.3.4		[Disjunctive with particle before the subject]		220		
+6	maq2-1-5-4-4	2.1.2.4.4		[Reduction of the hypothetical proposition to the categorical proposition]		220		
+5	maq2-1-5-5	2.1.2.5		Affirmation and negation of hypothetical propositions		221		
+6	maq2-1-5-5-1	2.1.2.5.1		[Conditional]		221		
+7	maq2-1-5-5-1-1	2.1.2.5.1.1		[Affirmative conditional (luzūmi)]		221		
+7	maq2-1-5-5-1-2	2.1.2.5.1.2		[Negative conditional and contradictory of affirmative conditional]		221		
+6	maq2-1-5-5-2	2.1.2.5.2		[Disjunctive]		222		
+7	maq2-1-5-5-2-1	2.1.2.5.2.1		[Affirmative disjunctive]		222		
+7	maq2-1-5-5-2-2	2.1.2.5.2.2		[Negative disjunctive]		222		
+5	maq2-1-5-6	2.1.2.6		The truth of hypothetical propositions and their falsehood		222		
+6	maq2-1-5-6-1	2.1.2.6.1		[Conditional]		222		
+7	maq2-1-5-6-1-1	2.1.2.6.1.1		Truth		222		
+7	maq2-1-5-6-1-2	2.1.2.6.1.2		Falsehood		222		
+6	maq2-1-5-6-2	2.1.2.6.2		[Disjunctive]		223		
+7	maq2-1-5-6-2-1	2.1.2.6.2.1		[Real disjunction (exclusive and exhaustive)]	ḥaqīqīyya	223		
+7	maq2-1-5-6-2-2	2.1.2.6.2.2		[Inclusive disjunction]	māniʿ al-khuluww	223		
+7	maq2-1-5-6-2-3	2.1.2.6.2.3		[Exclusive non-exhaustive disjunction]	māniʿ al-jamʿ	223		
+5	maq2-1-5-7	2.1.2.7		Quantified, indeterminate, and singular hypothetical propositions		223		
+6	maq2-1-5-7-1	2.1.2.7.1		[The quantifier in hypothetical propositions]		223		
+6	maq2-1-5-7-2	2.1.2.7.2		[The four quantified conditional propositions]		224		
+7	maq2-1-5-7-2-1	2.1.2.7.2.1		[Universal affirmative conditional]		224		
+8	maq2-1-5-7-2-1-1	(a) Truth conditions of the coincidental			ittifāqī	224		
+9	maq2-1-5-7-2-1-1-1	(aa) Essentialist reading						
+9	maq2-1-5-7-2-1-1-2	(ab) Externalist reading						
+8	maq2-1-5-7-2-1-2	(b) Truth conditions of the implicative			luzūmī	225		
+7	maq2-1-5-7-2-2	2.1.2.7.2.2		[Particular affirmative conditional]		225		
+8	maq2-1-5-7-2-2-1	(a) Truth				225		
+8	maq2-1-5-7-2-2-2	(b) Two problems				225		
+9	maq2-1-5-7-2-2-2-1	(ba) First problem						
+9	maq2-1-5-7-2-2-2-2	(bb) Second problem						
+7	maq2-1-5-7-2-3	2.1.2.7.2.3		[Universal negative conditional]		226		
+7	maq2-1-5-7-2-4	2.1.2.7.2.4		[Particular negative conditional]		227		
+6	maq2-1-5-7-3	2.1.2.7.3		[The four quantified disjunctive propositions]		227		
+7	maq2-1-5-7-3-1	2.1.2.7.3.1		[Universal affirmative disjunctive]		227		
+7	maq2-1-5-7-3-2	2.1.2.7.3.2		[Universal negative disjunctive]		227		
+7	maq2-1-5-7-3-3	2.1.2.7.3.3		[Particular affirmative disjunctive]		228		
+7	maq2-1-5-7-3-4	2.1.2.7.3.4		[Particular negative disjunctive]		228		
+5	maq2-1-5-8	2.1.2.8		The way (kayfiyya) [in which] the parts of hypothetical propositions [determine their number]		229		
+6	maq2-1-5-8-1	2.1.2.8.1		Universal affirmative conditional		229		
+6	maq2-1-5-8-2	2.1.2.8.2		Other cases		230		
+5	maq2-1-5-9	2.1.2.9		Mutual implication (talāzum) of hypothetical propositions		232		
+6	maq2-1-5-9-1	2.1.2.9.1		[Mutual implication of conditionals]		232		
+6	maq2-1-5-9-2	2.1.2.9.2		[Mutual implication of disjunctives]		232		
+6	maq2-1-5-9-3	2.1.2.9.3		[Mutual implication of conditionals and disjunctives]		233		
+5	maq2-1-5-10	2.1.2.10		Propositions with different forms	muḥarrafāt	235		
+5	maq2-1-5-11	2.1.2.11		On the modes of hypothetical propositions		235		
+5	maq2-1-5-12	2.1.2.12		Contradiction of hypothetical propositions		236		
+5	maq2-1-5-13	2.1.2.13		Conversions		236		
+5	maq2-1-5-14	2.1.2.14		On the fact that hypothetical propositions are composed of two propositions only		236		
+5	maq2-1-5-15	2.1.2.15		Linguistic remarks		237		
+3	maq2-2	2.2	Bāb	Syllogism		239		
+4	maq2-2-1	2.2.1		Premises		241		
+5	maq2-2-1-1	2.2.1.1 Divisions of proof (<i>ḥujja</i>)	Baḥth			241		
+5	maq2-2-1-2	2.2.1.2 Syllogism	Baḥth			243		
+6	maq2-2-1-2-1	Doubts and replies				245		
+5	maq2-2-1-3	2.2.1.3 Division of syllogism	Baḥth			248		
+4	maq2-2-2	2.2.2		Goals		251		
+5	maq2-2-2-1	2.2.2.1	Qism	Simple syllogisms from categoricals		253		
+6	maq2-2-2-1-1	2.2.2.1.1		First figure		253		
+7	maq2-2-2-1-1-1	2.2.2.1.1.1		[Doubts on the first mood of the first figure]		257		
+7	maq2-2-2-1-1-2	2.2.2.1.1.2		[Replies to doubts]		258		
+6	maq2-2-2-1-2	2.2.2.1.2		Second figure		259		
+6	maq2-2-2-1-3	2.2.2.1.3		Third figure		263		
+6	maq2-2-2-1-4	2.2.2.1.4		Fourth figure		265		
+5	maq2-2-2-2	2.2.2.2	Qism	Mixed syllogisms in the four figures		272		
+6	maq2-2-2-2-1	2.2.2.2.1		Necessity propositions		306		
+6	maq2-2-2-2-2	2.2.2.2.2		Possibility propositions		307		
+6	maq2-2-2-2-3	2.2.2.2.3		Mix of absolute and necessity propositions		307		
+6	maq2-2-2-2-4	2.2.2.2.4		Mix of possibility and necessity propositions		309		
+6	maq2-2-2-2-5	2.2.2.2.5		Mix of possibility and absolute propositions		311		
+5	maq2-2-2-3	2.2.2.3	Qism	Hypothetical syllogisms		313		
+6	maq2-2-2-3-1	2.2.2.3.1		Composed of conditionals		313		
+6	maq2-2-2-3-2	2.2.2.3.2		Composed of disjunctives		314		
+6	maq2-2-2-3-3	2.2.2.3.3		Composed of categoricals and conditionals		314		
+6	maq2-2-2-3-4	2.2.2.3.4		Composed of categoricals and disjunctives		316		
+6	maq2-2-2-3-5	2.2.2.3.5		Composed of conditionals and disjunctives		317		
+5	maq2-2-2-4	2.2.2.4	Qism	Syllogisms in which the middle term is not completely repeated		319		
+5	maq2-2-2-5	2.2.2.5	Qism	Repetitive Syllogisms		320		
+6	maq2-2-2-5-1	2.2.2.5.1		First division (the hypothetical is a conditional)		321		
+6	maq2-2-2-5-2	2.2.2.5.2		Second division (the hypothetical is a disjunctive)		326		
+4	maq2-2-3	2.2.3		Appendices	lawāḥiq	328		
+5	maq2-2-3-1	2.2.6.1				331		
+5	maq2-2-3-2	2.2.6.2		Reductio ad absurdum		332		
+5	maq2-2-3-3	2.2.6.3		Conversion and circle		334		
+5	maq2-2-3-4	2.2.6.4		Acquisition of premises		334		
+5	maq2-2-3-5	2.2.6.5		Analysis		336		
+5	maq2-2-3-6	2.2.6.6		Additional indirect conclusions		337		
+5	maq2-2-3-7	2.2.6.7		True conclusions from false premises		337		
+5	maq2-2-3-8	2.2.6.8		Induction		337		
+5	maq2-2-3-9	2.2.6.9		Example		338		
+3	maq2-3	2.3	Bāb	Demonstration		331		
+4	maq2-3-1	2.3.1		[Definition of demonstration]		343		
+4	maq2-3-2	2.3.2 [Principles of demonstration				344		
+4	maq2-3-3	2.3.3		[Doubts on the opinion of the majority]		347		
+4	maq2-3-4	2.3.4		[Fallacies]		354		

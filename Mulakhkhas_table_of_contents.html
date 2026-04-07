@@ -264,7 +264,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            overflow: auto;
+            overflow: hidden;
             cursor: grab;
         }
 
@@ -915,7 +915,7 @@
             <button class="panel-toggle" onclick="togglePanel('instructions-panel')" title="Collapse / expand">▾</button>
         </div>
         <div class="instructions-body">
-            Click nodes to expand/collapse. Use the <strong>Depth slider</strong> to control how many levels are visible. Use <strong>Ctrl+Scroll</strong> (or <strong>⌘+Scroll</strong> on Mac) to zoom with trackpad/mouse. Scroll normally to pan.
+            Click nodes to expand/collapse. Use the <strong>Depth slider</strong> to control how many levels are visible. Use <strong>Ctrl+Scroll</strong> (or <strong>⌘+Scroll</strong> on Mac) to zoom. Scroll or drag to pan.
         </div>
     </div>
     
@@ -3832,7 +3832,8 @@
         };
 
         let nodeStates = {}; // Track collapsed/expanded state
-        let currentZoom = 1.0; // Track zoom level
+        let currentZoom = 1.0;
+        let panX = 0, panY = 0; // Pan offset in screen pixels
         
         // Zoom functions
         // Zoom keeping a viewport-space pivot point stationary.
@@ -3845,12 +3846,14 @@
                 pivotX = container.clientWidth  / 2;
                 pivotY = container.clientHeight / 2;
             }
-            const cx = (container.scrollLeft + pivotX) / oldZoom;
-            const cy = (container.scrollTop  + pivotY) / oldZoom;
+            // Content-space point under the pivot
+            const cx = (pivotX - panX) / oldZoom;
+            const cy = (pivotY - panY) / oldZoom;
             currentZoom = newZoom;
+            // Adjust pan so the same content point stays under the pivot
+            panX = pivotX - cx * currentZoom;
+            panY = pivotY - cy * currentZoom;
             applyZoom();
-            container.scrollLeft = cx * currentZoom - pivotX;
-            container.scrollTop  = cy * currentZoom - pivotY;
         }
 
         function zoomIn() {
@@ -3867,46 +3870,29 @@
         
         function fitToScreen() {
             const container = document.getElementById('mindmap-container');
-            const mindmap = document.getElementById('mindmap');
-            
+
             // Calculate the bounds of all visible content
             const bounds = calculateCanvasBounds(mindmapData, []);
-            
-            // Get container dimensions
+
             const containerWidth = container.clientWidth;
             const containerHeight = container.clientHeight;
-            
+
             // Calculate zoom needed to fit content (with 10% padding)
             const zoomX = (containerWidth * 0.9) / bounds.width;
             const zoomY = (containerHeight * 0.9) / bounds.height;
-            
-            // Use the smaller zoom to ensure everything fits
-            currentZoom = Math.min(zoomX, zoomY, 1.0); // Don't zoom in beyond 1.0
-            currentZoom = Math.max(currentZoom, 0.1); // Minimum 0.1x zoom
-            
+
+            currentZoom = Math.min(zoomX, zoomY, 1.0);
+            currentZoom = Math.max(currentZoom, 0.1);
+
+            // Centre content in viewport
+            panX = (containerWidth - bounds.width * currentZoom) / 2 - bounds.x * currentZoom;
+            panY = (containerHeight - bounds.height * currentZoom) / 2 - bounds.y * currentZoom;
             applyZoom();
-            
-            // Scroll to show the content centered
-            container.scrollLeft = 0;
-            container.scrollTop = 0;
         }
         
         function applyZoom() {
             const mindmap = document.getElementById('mindmap');
-            const container = document.getElementById('mindmap-container');
-            // Use actual content size if available, else fallback
-            const baseW = mindmap.scrollWidth / currentZoom || 8000;
-            const baseH = mindmap.scrollHeight / currentZoom || 12000;
-            const scaledW = baseW * currentZoom;
-            const scaledH = baseH * currentZoom;
-            const cw = container.clientWidth;
-            const ch = container.clientHeight;
-            // Centre the map when it's smaller than the viewport
-            const offsetX = scaledW < cw ? (cw - scaledW) / 2 : 0;
-            const offsetY = scaledH < ch ? (ch - scaledH) / 2 : 0;
-            mindmap.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${currentZoom})`;
-            mindmap.style.width = `${Math.max(scaledW, cw)}px`;
-            mindmap.style.height = `${Math.max(scaledH, ch)}px`;
+            mindmap.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`;
         }
         
         // Layout configuration
@@ -4255,24 +4241,12 @@
         // Reset view to initial state
         function centerContent() {
             const container = document.getElementById('mindmap-container');
-            const nodes = container.querySelectorAll('.node');
-            if (nodes.length === 0) return;
-            const containerRect = container.getBoundingClientRect();
-            let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-            nodes.forEach(el => {
-                if (el.style.display === 'none') return;
-                const r = el.getBoundingClientRect();
-                const x = container.scrollLeft + r.left - containerRect.left;
-                const y = container.scrollTop + r.top - containerRect.top;
-                if (x < minX) minX = x;
-                if (y < minY) minY = y;
-                if (x + r.width > maxX) maxX = x + r.width;
-                if (y + r.height > maxY) maxY = y + r.height;
-            });
-            const contentCenterX = (minX + maxX) / 2;
-            const contentCenterY = (minY + maxY) / 2;
-            container.scrollLeft = contentCenterX - containerRect.width / 2;
-            container.scrollTop = contentCenterY - containerRect.height / 2;
+            const bounds = calculateCanvasBounds(mindmapData, []);
+            const cw = container.clientWidth;
+            const ch = container.clientHeight;
+            panX = (cw - bounds.width * currentZoom) / 2 - bounds.x * currentZoom;
+            panY = (ch - bounds.height * currentZoom) / 2 - bounds.y * currentZoom;
+            applyZoom();
         }
 
         function resetView() {
@@ -4284,28 +4258,28 @@
         
         // Calculate the actual bounds of all visible nodes
         function calculateCanvasBounds(node, parentChain = []) {
-            let maxX = 0;
-            let maxY = 0;
-            
+            let minX = Infinity, minY = Infinity, maxX = 0, maxY = 0;
+
             function traverse(n, chain) {
                 if (!shouldNodeBeVisible(n, chain)) return;
-                
+
                 const el = document.getElementById(`node-${n.id}`);
                 if (el) {
-                    const right = n.x + el.offsetWidth;
-                    const bottom = n.y + el.offsetHeight;
-                    maxX = Math.max(maxX, right);
-                    maxY = Math.max(maxY, bottom);
+                    minX = Math.min(minX, n.x);
+                    minY = Math.min(minY, n.y);
+                    maxX = Math.max(maxX, n.x + el.offsetWidth);
+                    maxY = Math.max(maxY, n.y + el.offsetHeight);
                 }
-                
+
                 if (n.children && nodeStates[n.id] !== 'collapsed') {
                     const newChain = [...chain, n];
                     n.children.forEach(child => traverse(child, newChain));
                 }
             }
-            
+
             traverse(node, parentChain);
-            return { width: maxX + 300, height: maxY + 300 }; // Add substantial padding
+            if (minX === Infinity) { minX = 0; minY = 0; }
+            return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
         }
         
         // Main render function
@@ -4337,8 +4311,8 @@
                 console.log('Mindmap scrollWidth:', mindmap.scrollWidth, 'scrollHeight:', mindmap.scrollHeight);
                 
                 // Set SVG size to accommodate all content
-                const displayWidth = Math.max(bounds.width, mindmap.scrollWidth);
-                const displayHeight = Math.max(bounds.height, mindmap.scrollHeight);
+                const displayWidth = Math.max(bounds.x + bounds.width + 300, mindmap.scrollWidth);
+                const displayHeight = Math.max(bounds.y + bounds.height + 300, mindmap.scrollHeight);
                 
                 console.log('Final SVG size:', displayWidth, 'x', displayHeight);
                 
@@ -4460,14 +4434,15 @@
                 const el = searchMatches[searchIndex];
                 el.classList.add('search-focus');
                 countEl.textContent = `${searchIndex + 1} / ${searchMatches.length}`;
-                // Scroll to the focused match — instant to avoid jitter
+                // Pan to centre the focused match in viewport
                 const container = document.getElementById('mindmap-container');
                 const nodeRect = el.getBoundingClientRect();
                 const containerRect = container.getBoundingClientRect();
-                const targetLeft = container.scrollLeft + (nodeRect.left - containerRect.left) - containerRect.width / 2 + nodeRect.width / 2;
-                const targetTop = container.scrollTop + (nodeRect.top - containerRect.top) - containerRect.height / 2 + nodeRect.height / 2;
-                container.scrollLeft = targetLeft;
-                container.scrollTop = targetTop;
+                const nodeCenterX = nodeRect.left + nodeRect.width / 2 - containerRect.left;
+                const nodeCenterY = nodeRect.top + nodeRect.height / 2 - containerRect.top;
+                panX += containerRect.width / 2 - nodeCenterX;
+                panY += containerRect.height / 2 - nodeCenterY;
+                applyZoom();
             }
         }
 
@@ -4544,24 +4519,24 @@
         // ── Drag-to-pan ─────────────────────────────────────────────────────
         (function() {
             const container = document.getElementById('mindmap-container');
-            let dragging = false, startX, startY, scrollL, scrollT;
+            let dragging = false, startX, startY, startPanX, startPanY;
 
             container.addEventListener('mousedown', e => {
-                // Only pan if clicking on empty canvas, not on a node
                 if (e.target.closest('.node')) return;
                 dragging = true;
                 startX = e.clientX;
                 startY = e.clientY;
-                scrollL = container.scrollLeft;
-                scrollT = container.scrollTop;
+                startPanX = panX;
+                startPanY = panY;
                 container.style.cursor = 'grabbing';
                 e.preventDefault();
             });
 
             window.addEventListener('mousemove', e => {
                 if (!dragging) return;
-                container.scrollLeft = scrollL - (e.clientX - startX);
-                container.scrollTop  = scrollT - (e.clientY - startY);
+                panX = startPanX + (e.clientX - startX);
+                panY = startPanY + (e.clientY - startY);
+                applyZoom();
             });
 
             window.addEventListener('mouseup', () => {
@@ -4610,8 +4585,8 @@
             // Add mousewheel/trackpad zoom support
             const container = document.getElementById('mindmap-container');
             container.addEventListener('wheel', (e) => {
+                e.preventDefault();
                 if (e.ctrlKey || e.metaKey) {
-                    e.preventDefault();
                     const rect = container.getBoundingClientRect();
                     // Proportional scaling: trackpad pinch fires many small deltaY
                     // events — scale by magnitude rather than a fixed step so the
@@ -4619,6 +4594,11 @@
                     const factor = Math.pow(0.998, e.deltaY);
                     const newZoom = Math.min(Math.max(currentZoom * factor, 0.3), 3.0);
                     applyZoomAround(newZoom, e.clientX - rect.left, e.clientY - rect.top);
+                } else {
+                    // Trackpad/mouse scroll → pan
+                    panX -= e.deltaX;
+                    panY -= e.deltaY;
+                    applyZoom();
                 }
             }, { passive: false });
         });

@@ -66,6 +66,10 @@
             font-size: 0.75em;
             margin-top: 6px;
             margin-bottom: 6px;
+        }
+
+        .byline-short {
+            display: none;
             letter-spacing: 0.03em;
         }
 
@@ -269,10 +273,138 @@
         }
 
         @media (max-width: 768px) {
-            .header { padding: 12px 16px; }
-            h1 { font-size: 1.1em; }
-            .controls { right: 8px; max-width: 180px; }
-            .instructions { left: 8px; max-width: 200px; }
+            .header { padding: 8px 12px; }
+            h1 { font-size: 0.9em; margin-bottom: 2px; }
+            .byline { font-size: 0.55em; margin-top: 1px; margin-bottom: 1px; opacity: 0.4; }
+            .byline-full { display: none !important; }
+            .byline-short { display: block !important; }
+            .subtitle { font-size: 0.55em; }
+            #mindmap-container, .controls, .instructions, .search-bar { display: none !important; }
+            #mobile-view { display: block !important; }
+        }
+
+        /* ── Mobile list view ─────────────────────────────────── */
+        #mobile-view {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 10px 12px 40px;
+            color: #e0e8f0;
+        }
+
+        .mobile-search {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            padding: 8px 0;
+            background: #2a2d35;
+            display: flex;
+            gap: 6px;
+        }
+
+        .mobile-search input {
+            flex: 1;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .mobile-search button {
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #dce6f3;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .mobile-node {
+            padding: 8px 10px;
+            margin: 2px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1.4;
+            -webkit-tap-highlight-color: transparent;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .mobile-node .node-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .mobile-node.depth-0 { background: rgba(93,78,124,0.6); font-size: 16px; font-weight: 600; }
+        .mobile-node.depth-1 { background: rgba(90,109,140,0.5); font-size: 15px; font-weight: 500; }
+        .mobile-node.depth-2 { background: rgba(74,124,158,0.4); font-weight: 500; }
+        .mobile-node.depth-3 { background: rgba(107,124,142,0.35); }
+        .mobile-node.depth-4 { background: rgba(122,138,154,0.3); }
+        .mobile-node.depth-5 { background: rgba(138,154,170,0.25); font-size: 13px; padding: 6px 8px; }
+        .mobile-node.depth-6 { background: rgba(154,170,188,0.2); font-size: 12px; padding: 5px 8px; }
+        .mobile-node.depth-7,
+        .mobile-node.depth-8,
+        .mobile-node.depth-9,
+        .mobile-node.depth-10,
+        .mobile-node.depth-11,
+        .mobile-node.depth-12,
+        .mobile-node.depth-13,
+        .mobile-node.depth-14 { background: rgba(170,186,202,0.15); font-size: 12px; padding: 4px 6px; }
+
+        .mobile-children {
+            padding-left: 8px;
+            border-left: 1px solid rgba(255,255,255,0.08);
+            margin-left: 2px;
+            display: none;
+        }
+
+        /* Cap indentation at deeper levels */
+        .mobile-children .mobile-children .mobile-children .mobile-children .mobile-children {
+            padding-left: 4px;
+            margin-left: 0;
+            border-left-color: rgba(255,255,255,0.04);
+        }
+
+        .mobile-children.expanded {
+            display: block;
+        }
+
+        .mobile-node .expand-icon {
+            display: inline-block;
+            width: 16px;
+            font-size: 11px;
+            opacity: 0.5;
+        }
+
+        .mobile-node .page-ref {
+            opacity: 0.4;
+            font-size: 11px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .mobile-node.search-hit {
+            outline: 2px solid #f0c040;
+            background: rgba(240,192,64,0.15) !important;
+        }
+
+        .mobile-node.search-dim {
+            opacity: 0.25;
         }
         
         #mindmap {
@@ -869,7 +1001,8 @@
 <body>
     <div class="header">
         <h1>Fakhr ad-Dīn ar-Rāzī, <em>Manṭiq al-Mulakhkhaṣ</em></h1>
-        <div class="byline">A. Qarāmalkī and A. Ashgarīnizhād (eds.), Tehran: Intishārāt Dānišgāh-i Imām Ṣādiq, 2002</div>
+        <div class="byline byline-full">A. Qarāmalkī and A. Ashgarīnizhād (eds.), Tehran: Intishārāt Dānišgāh-i Imām Ṣādiq, 2002</div>
+        <div class="byline byline-short">ed. Qarāmalkī and Ashgarīnizhād, Tehran, 2002</div>
         <div class="subtitle">Interactive Table of Contents — Riccardo Strobino | Tufts University | 2026 | CC BY 4.0</div>
     </div>
     <div class="search-bar" id="search-bar">
@@ -919,6 +1052,7 @@
         </div>
     </div>
     
+    <div id="mobile-view"></div>
     <div id="mindmap-container">
         <div id="mindmap">
             <svg id="connections"></svg>
@@ -4516,6 +4650,122 @@
             });
         }
 
+        // ── Mobile list view ─────────────────────────────────────────────────
+        function buildMobileView() {
+            const container = document.getElementById('mobile-view');
+            if (!container) return;
+
+            let html = '<div class="mobile-search">';
+            html += '<input type="text" id="mobile-search-input" placeholder="Search…" oninput="mobileSearch()">';
+            html += '<button onclick="mobileClearSearch()">Clear</button>';
+            html += '</div>';
+            html += buildMobileNode(mindmapData, 0);
+            container.innerHTML = html;
+
+            // Expand first two levels by default
+            container.querySelectorAll('.mobile-children[data-depth="0"], .mobile-children[data-depth="1"]').forEach(el => {
+                el.classList.add('expanded');
+            });
+        }
+
+        function buildMobileNode(node, depth) {
+            let html = '';
+            const hasChildren = node.children && node.children.length > 0;
+            const icon = hasChildren ? '<span class="expand-icon">▸</span>' : '<span class="expand-icon"></span>';
+            const page = node.page ? '<span class="page-ref">p. ' + node.page + '</span>' : '';
+
+            let label = node.text || '';
+            if (node.label) label += ' <em style="opacity:0.7;">(' + node.label + ')</em>';
+            if (node.desc) label += ' ' + node.desc;
+            if (node.term) label += ' <em style="opacity:0.7;">(' + node.term + ')</em>';
+
+            html += '<div class="mobile-node depth-' + depth + '" data-id="' + node.id + '"';
+            if (hasChildren) html += ' onclick="mobileToggle(this)"';
+            html += '>' + icon + '<span class="node-text">' + label + '</span>' + page + '</div>';
+
+            if (hasChildren) {
+                html += '<div class="mobile-children" data-depth="' + depth + '">';
+                node.children.forEach(child => {
+                    html += buildMobileNode(child, depth + 1);
+                });
+                html += '</div>';
+            }
+            return html;
+        }
+
+        function mobileToggle(el) {
+            const children = el.nextElementSibling;
+            if (children && children.classList.contains('mobile-children')) {
+                children.classList.toggle('expanded');
+                const icon = el.querySelector('.expand-icon');
+                if (icon) icon.textContent = children.classList.contains('expanded') ? '▾' : '▸';
+            }
+        }
+
+        function mobileSearch() {
+            const q = document.getElementById('mobile-search-input').value.trim().toLowerCase();
+            const container = document.getElementById('mobile-view');
+            const allNodes = container.querySelectorAll('.mobile-node');
+            const allChildren = container.querySelectorAll('.mobile-children');
+
+            if (!q) { mobileClearSearch(); return; }
+
+            // Find matches
+            const matchEls = new Set();
+            allNodes.forEach(el => {
+                el.classList.remove('search-hit', 'search-dim');
+                if (el.textContent.toLowerCase().includes(q)) {
+                    matchEls.add(el);
+                }
+            });
+
+            // Expand ancestors of matches and dim non-matches
+            allChildren.forEach(el => el.classList.remove('expanded'));
+            matchEls.forEach(el => {
+                // Walk up and expand all parent .mobile-children
+                let parent = el.parentElement;
+                while (parent && parent.id !== 'mobile-view') {
+                    if (parent.classList.contains('mobile-children')) {
+                        parent.classList.add('expanded');
+                    }
+                    parent = parent.parentElement;
+                }
+            });
+
+            allNodes.forEach(el => {
+                if (matchEls.has(el)) {
+                    el.classList.add('search-hit');
+                } else {
+                    el.classList.add('search-dim');
+                }
+            });
+
+            // Scroll to first match
+            const first = container.querySelector('.mobile-node.search-hit');
+            if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function mobileClearSearch() {
+            document.getElementById('mobile-search-input').value = '';
+            const container = document.getElementById('mobile-view');
+            container.querySelectorAll('.mobile-node').forEach(el => {
+                el.classList.remove('search-hit', 'search-dim');
+            });
+            // Collapse back to depth 1
+            container.querySelectorAll('.mobile-children').forEach(el => {
+                const d = parseInt(el.dataset.depth);
+                if (d <= 1) el.classList.add('expanded');
+                else el.classList.remove('expanded');
+            });
+            // Reset expand icons
+            container.querySelectorAll('.expand-icon').forEach(icon => {
+                const children = icon.parentElement.nextElementSibling;
+                if (children && children.classList.contains('mobile-children')) {
+                    icon.textContent = children.classList.contains('expanded') ? '▾' : '▸';
+                }
+            });
+        }
+
         // ── Drag-to-pan ─────────────────────────────────────────────────────
         (function() {
             const container = document.getElementById('mindmap-container');
@@ -4549,11 +4799,16 @@
 
         // ── Initialize ───────────────────────────────────────────────────────
         window.addEventListener('load', () => {
+            // Build mobile view
+            buildMobileView();
             // Adjust container to sit below header
             const header = document.querySelector('.header');
             const mc = document.getElementById('mindmap-container');
+            const mv = document.getElementById('mobile-view');
             function adjustTop() {
-                mc.style.top = header.offsetHeight + 'px';
+                const h = header.offsetHeight + 'px';
+                mc.style.top = h;
+                mv.style.top = h;
             }
             adjustTop();
             window.addEventListener('resize', adjustTop);
